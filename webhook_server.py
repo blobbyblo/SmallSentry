@@ -47,8 +47,8 @@ def webhook():
     if request.headers.get("X-GitHub-Event") == "push":
         subprocess.run(["git", "-C", REPO_PATH, "fetch", "--all"])
         subprocess.run(["git", "-C", REPO_PATH, "reset", "--hard", "origin/main"])
-        subprocess.run(["systemctl", "restart", "smallsentry"])
-        subprocess.run(["systemctl", "restart", "smallsentry-webhook"])
+        subprocess.run(["sudo", "systemctl", "restart", "smallsentry"])
+        subprocess.run(["sudo", "systemctl", "restart", "smallsentry-webhook"])
         return "Updated SmallSentry", 200
     return "Ignored", 200
 
