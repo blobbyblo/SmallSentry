@@ -1,4 +1,4 @@
-# smallsentry/network/discovery.py
+# smallsentry/networking/discovery.py
 
 def octet_first() -> int:
     return 10
