@@ -1,0 +1,2 @@
+# smallsentry/networking/miner.py
+
